@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855EF09C17F2166B00E57478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09B17F2166B00E57478 /* Foundation.framework */; };
+		855EF09E17F2166B00E57478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09D17F2166B00E57478 /* CoreGraphics.framework */; };
+		855EF0A017F2166B00E57478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09F17F2166B00E57478 /* UIKit.framework */; };
+		855EF0A617F2166B00E57478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 855EF0A417F2166B00E57478 /* InfoPlist.strings */; };
+		855EF0A817F2166B00E57478 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 855EF0A717F2166B00E57478 /* main.m */; };
+		855EF0AC17F2166C00E57478 /* HUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 855EF0AB17F2166C00E57478 /* HUAppDelegate.m */; };
+		855EF0AE17F2166C00E57478 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855EF0AD17F2166C00E57478 /* Images.xcassets */; };
+		855EF0B517F2166C00E57478 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF0B417F2166C00E57478 /* XCTest.framework */; };
+		855EF0B617F2166C00E57478 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09B17F2166B00E57478 /* Foundation.framework */; };
+		855EF0B717F2166C00E57478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09F17F2166B00E57478 /* UIKit.framework */; };
+		855EF0BF17F2166C00E57478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 855EF0BD17F2166C00E57478 /* InfoPlist.strings */; };
+		855EF0C117F2166C00E57478 /* HuetasticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 855EF0C017F2166C00E57478 /* HuetasticTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		855EF0B817F2166C00E57478 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 855EF09017F2166B00E57478 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 855EF09717F2166B00E57478;
+			remoteInfo = Huetastic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		855EF09817F2166B00E57478 /* Huetastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huetastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		855EF09B17F2166B00E57478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		855EF09D17F2166B00E57478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		855EF09F17F2166B00E57478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		855EF0A317F2166B00E57478 /* Huetastic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Huetastic-Info.plist"; sourceTree = "<group>"; };
+		855EF0A517F2166B00E57478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		855EF0A717F2166B00E57478 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		855EF0A917F2166B00E57478 /* Huetastic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Huetastic-Prefix.pch"; sourceTree = "<group>"; };
+		855EF0AA17F2166B00E57478 /* HUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUAppDelegate.h; sourceTree = "<group>"; };
+		855EF0AB17F2166C00E57478 /* HUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUAppDelegate.m; sourceTree = "<group>"; };
+		855EF0AD17F2166C00E57478 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		855EF0B317F2166C00E57478 /* HuetasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuetasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		855EF0B417F2166C00E57478 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		855EF0BC17F2166C00E57478 /* HuetasticTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuetasticTests-Info.plist"; sourceTree = "<group>"; };
+		855EF0BE17F2166C00E57478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		855EF0C017F2166C00E57478 /* HuetasticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuetasticTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		855EF09517F2166B00E57478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF09E17F2166B00E57478 /* CoreGraphics.framework in Frameworks */,
+				855EF0A017F2166B00E57478 /* UIKit.framework in Frameworks */,
+				855EF09C17F2166B00E57478 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855EF0B017F2166C00E57478 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF0B517F2166C00E57478 /* XCTest.framework in Frameworks */,
+				855EF0B717F2166C00E57478 /* UIKit.framework in Frameworks */,
+				855EF0B617F2166C00E57478 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		855EF08F17F2166B00E57478 = {
+			isa = PBXGroup;
+			children = (
+				855EF0A117F2166B00E57478 /* Huetastic */,
+				855EF0BA17F2166C00E57478 /* HuetasticTests */,
+				855EF09A17F2166B00E57478 /* Frameworks */,
+				855EF09917F2166B00E57478 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		855EF09917F2166B00E57478 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855EF09817F2166B00E57478 /* Huetastic.app */,
+				855EF0B317F2166C00E57478 /* HuetasticTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855EF09A17F2166B00E57478 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855EF09B17F2166B00E57478 /* Foundation.framework */,
+				855EF09D17F2166B00E57478 /* CoreGraphics.framework */,
+				855EF09F17F2166B00E57478 /* UIKit.framework */,
+				855EF0B417F2166C00E57478 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		855EF0A117F2166B00E57478 /* Huetastic */ = {
+			isa = PBXGroup;
+			children = (
+				855EF0AA17F2166B00E57478 /* HUAppDelegate.h */,
+				855EF0AB17F2166C00E57478 /* HUAppDelegate.m */,
+				855EF0AD17F2166C00E57478 /* Images.xcassets */,
+				855EF0A217F2166B00E57478 /* Supporting Files */,
+			);
+			path = Huetastic;
+			sourceTree = "<group>";
+		};
+		855EF0A217F2166B00E57478 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				855EF0A317F2166B00E57478 /* Huetastic-Info.plist */,
+				855EF0A417F2166B00E57478 /* InfoPlist.strings */,
+				855EF0A717F2166B00E57478 /* main.m */,
+				855EF0A917F2166B00E57478 /* Huetastic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		855EF0BA17F2166C00E57478 /* HuetasticTests */ = {
+			isa = PBXGroup;
+			children = (
+				855EF0C017F2166C00E57478 /* HuetasticTests.m */,
+				855EF0BB17F2166C00E57478 /* Supporting Files */,
+			);
+			path = HuetasticTests;
+			sourceTree = "<group>";
+		};
+		855EF0BB17F2166C00E57478 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				855EF0BC17F2166C00E57478 /* HuetasticTests-Info.plist */,
+				855EF0BD17F2166C00E57478 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		855EF09717F2166B00E57478 /* Huetastic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855EF0C417F2166C00E57478 /* Build configuration list for PBXNativeTarget "Huetastic" */;
+			buildPhases = (
+				855EF09417F2166B00E57478 /* Sources */,
+				855EF09517F2166B00E57478 /* Frameworks */,
+				855EF09617F2166B00E57478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Huetastic;
+			productName = Huetastic;
+			productReference = 855EF09817F2166B00E57478 /* Huetastic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		855EF0B217F2166C00E57478 /* HuetasticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855EF0C717F2166C00E57478 /* Build configuration list for PBXNativeTarget "HuetasticTests" */;
+			buildPhases = (
+				855EF0AF17F2166C00E57478 /* Sources */,
+				855EF0B017F2166C00E57478 /* Frameworks */,
+				855EF0B117F2166C00E57478 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				855EF0B917F2166C00E57478 /* PBXTargetDependency */,
+			);
+			name = HuetasticTests;
+			productName = HuetasticTests;
+			productReference = 855EF0B317F2166C00E57478 /* HuetasticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		855EF09017F2166B00E57478 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HU;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Creative Queries";
+				TargetAttributes = {
+					855EF0B217F2166C00E57478 = {
+						TestTargetID = 855EF09717F2166B00E57478;
+					};
+				};
+			};
+			buildConfigurationList = 855EF09317F2166B00E57478 /* Build configuration list for PBXProject "Huetastic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 855EF08F17F2166B00E57478;
+			productRefGroup = 855EF09917F2166B00E57478 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				855EF09717F2166B00E57478 /* Huetastic */,
+				855EF0B217F2166C00E57478 /* HuetasticTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		855EF09617F2166B00E57478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF0A617F2166B00E57478 /* InfoPlist.strings in Resources */,
+				855EF0AE17F2166C00E57478 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855EF0B117F2166C00E57478 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF0BF17F2166C00E57478 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		855EF09417F2166B00E57478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF0A817F2166B00E57478 /* main.m in Sources */,
+				855EF0AC17F2166C00E57478 /* HUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855EF0AF17F2166C00E57478 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855EF0C117F2166C00E57478 /* HuetasticTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		855EF0B917F2166C00E57478 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 855EF09717F2166B00E57478 /* Huetastic */;
+			targetProxy = 855EF0B817F2166C00E57478 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		855EF0A417F2166B00E57478 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855EF0A517F2166B00E57478 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		855EF0BD17F2166C00E57478 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				855EF0BE17F2166C00E57478 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		855EF0C217F2166C00E57478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		855EF0C317F2166C00E57478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		855EF0C517F2166C00E57478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Huetastic/Huetastic-Prefix.pch";
+				INFOPLIST_FILE = "Huetastic/Huetastic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		855EF0C617F2166C00E57478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Huetastic/Huetastic-Prefix.pch";
+				INFOPLIST_FILE = "Huetastic/Huetastic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		855EF0C817F2166C00E57478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Huetastic.app/Huetastic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Huetastic/Huetastic-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HuetasticTests/HuetasticTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		855EF0C917F2166C00E57478 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Huetastic.app/Huetastic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Huetastic/Huetastic-Prefix.pch";
+				INFOPLIST_FILE = "HuetasticTests/HuetasticTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		855EF09317F2166B00E57478 /* Build configuration list for PBXProject "Huetastic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855EF0C217F2166C00E57478 /* Debug */,
+				855EF0C317F2166C00E57478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855EF0C417F2166C00E57478 /* Build configuration list for PBXNativeTarget "Huetastic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855EF0C517F2166C00E57478 /* Debug */,
+				855EF0C617F2166C00E57478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		855EF0C717F2166C00E57478 /* Build configuration list for PBXNativeTarget "HuetasticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855EF0C817F2166C00E57478 /* Debug */,
+				855EF0C917F2166C00E57478 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 855EF09017F2166B00E57478 /* Project object */;
+}
