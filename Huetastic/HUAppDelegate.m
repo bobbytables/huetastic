@@ -7,6 +7,7 @@
 //
 
 #import "HUAppDelegate.h"
+#import "HUMainViewController.h"
 
 @implementation HUAppDelegate
 
@@ -16,6 +17,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HUMainViewController alloc] init]];
+    
     return YES;
 }
 

@@ -19,6 +19,10 @@
 		855EF0B717F2166C00E57478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855EF09F17F2166B00E57478 /* UIKit.framework */; };
 		855EF0BF17F2166C00E57478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 855EF0BD17F2166C00E57478 /* InfoPlist.strings */; };
 		855EF0C117F2166C00E57478 /* HuetasticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 855EF0C017F2166C00E57478 /* HuetasticTests.m */; };
+		85B7BA7417F2173B00B96F88 /* HUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7317F2173B00B96F88 /* HUMainViewController.m */; };
+		85B7BA7917F22B8000B96F88 /* HULight.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7817F22B8000B96F88 /* HULight.m */; };
+		85B7BA7C17F22D0500B96F88 /* HUBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7B17F22D0500B96F88 /* HUBridge.m */; };
+		EC41F3E1BBD541BF8FE275D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C96E9744B54FC28882A361 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C96E9744B54FC28882A361 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		855EF09817F2166B00E57478 /* Huetastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huetastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855EF09B17F2166B00E57478 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		855EF09D17F2166B00E57478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +53,13 @@
 		855EF0BC17F2166C00E57478 /* HuetasticTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuetasticTests-Info.plist"; sourceTree = "<group>"; };
 		855EF0BE17F2166C00E57478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		855EF0C017F2166C00E57478 /* HuetasticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuetasticTests.m; sourceTree = "<group>"; };
+		85B7BA7217F2173B00B96F88 /* HUMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUMainViewController.h; sourceTree = "<group>"; };
+		85B7BA7317F2173B00B96F88 /* HUMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUMainViewController.m; sourceTree = "<group>"; };
+		85B7BA7717F22B8000B96F88 /* HULight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HULight.h; sourceTree = "<group>"; };
+		85B7BA7817F22B8000B96F88 /* HULight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HULight.m; sourceTree = "<group>"; };
+		85B7BA7A17F22D0500B96F88 /* HUBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBridge.h; sourceTree = "<group>"; };
+		85B7BA7B17F22D0500B96F88 /* HUBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBridge.m; sourceTree = "<group>"; };
+		9BD16820EB9A44E6AE5C06B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 				855EF09E17F2166B00E57478 /* CoreGraphics.framework in Frameworks */,
 				855EF0A017F2166B00E57478 /* UIKit.framework in Frameworks */,
 				855EF09C17F2166B00E57478 /* Foundation.framework in Frameworks */,
+				EC41F3E1BBD541BF8FE275D4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 				855EF0BA17F2166C00E57478 /* HuetasticTests */,
 				855EF09A17F2166B00E57478 /* Frameworks */,
 				855EF09917F2166B00E57478 /* Products */,
+				9BD16820EB9A44E6AE5C06B1 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +114,7 @@
 				855EF09D17F2166B00E57478 /* CoreGraphics.framework */,
 				855EF09F17F2166B00E57478 /* UIKit.framework */,
 				855EF0B417F2166C00E57478 /* XCTest.framework */,
+				18C96E9744B54FC28882A361 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +122,8 @@
 		855EF0A117F2166B00E57478 /* Huetastic */ = {
 			isa = PBXGroup;
 			children = (
+				85B7BA7617F22B5700B96F88 /* Models */,
+				85B7BA7517F2174300B96F88 /* Controllers */,
 				855EF0AA17F2166B00E57478 /* HUAppDelegate.h */,
 				855EF0AB17F2166C00E57478 /* HUAppDelegate.m */,
 				855EF0AD17F2166C00E57478 /* Images.xcassets */,
@@ -144,6 +161,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		85B7BA7517F2174300B96F88 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85B7BA7217F2173B00B96F88 /* HUMainViewController.h */,
+				85B7BA7317F2173B00B96F88 /* HUMainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85B7BA7617F22B5700B96F88 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85B7BA7A17F22D0500B96F88 /* HUBridge.h */,
+				85B7BA7B17F22D0500B96F88 /* HUBridge.m */,
+				85B7BA7717F22B8000B96F88 /* HULight.h */,
+				85B7BA7817F22B8000B96F88 /* HULight.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 855EF0C417F2166C00E57478 /* Build configuration list for PBXNativeTarget "Huetastic" */;
 			buildPhases = (
+				505042FDC9CA4B6486F5091D /* Check Pods Manifest.lock */,
 				855EF09417F2166B00E57478 /* Sources */,
 				855EF09517F2166B00E57478 /* Frameworks */,
 				855EF09617F2166B00E57478 /* Resources */,
+				CEFDF188A24C468E832C036C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,13 +274,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		505042FDC9CA4B6486F5091D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEFDF188A24C468E832C036C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		855EF09417F2166B00E57478 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B7BA7C17F22D0500B96F88 /* HUBridge.m in Sources */,
 				855EF0A817F2166B00E57478 /* main.m in Sources */,
+				85B7BA7917F22B8000B96F88 /* HULight.m in Sources */,
 				855EF0AC17F2166C00E57478 /* HUAppDelegate.m in Sources */,
+				85B7BA7417F2173B00B96F88 /* HUMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +432,7 @@
 		};
 		855EF0C517F2166C00E57478 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD16820EB9A44E6AE5C06B1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -370,6 +446,7 @@
 		};
 		855EF0C617F2166C00E57478 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD16820EB9A44E6AE5C06B1 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -442,6 +519,7 @@
 				855EF0C617F2166C00E57478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		855EF0C717F2166C00E57478 /* Build configuration list for PBXNativeTarget "HuetasticTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +528,7 @@
 				855EF0C917F2166C00E57478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
