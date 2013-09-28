@@ -12,17 +12,27 @@
 
 @protocol HUBridgeDelegate <NSObject>
 
+@optional
+
 -(void)didFinishRetrievingBridgeIp:(HUBridge *)bridge;
+-(void)didFinishRetrievingLights:(NSArray *)lights;
+-(void)failedRetrievingBridgeIp:(HUBridge *)bridge;
+-(void)didCreateUser:(HUBridge *)bridge username:(NSString *)username;
 
 @end
 
 @interface HUBridge : NSObject
 
 @property (nonatomic, strong) NSString *bridgeIp;
+@property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) id <HUBridgeDelegate>delegate;
+@property (nonatomic, strong) NSArray *lights;
+
+-(id)initWithDelegate:(id)delegate;
+-(id)initWithUsername:(NSString *)username delegate:(id)delegate;
 
 -(void)findBridgeIp;
--(NSMutableArray *)allLights;
--(id)initWithDelegate:(id)delegate;
+-(void)retrieveLights;
+-(void)createUser:(NSString *)username;
 
 @end

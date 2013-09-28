@@ -8,6 +8,7 @@
 
 #import "HUAppDelegate.h"
 #import "HUMainViewController.h"
+#import "HUBridgeUserViewController.h"
 
 @implementation HUAppDelegate
 
@@ -18,7 +19,12 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HUMainViewController alloc] init]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if(![userDefaults objectForKey:@"bridgeUsername"]){
+        self.window.rootViewController = [[HUBridgeUserViewController alloc] init];
+    } else {
+        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HUMainViewController alloc] init]];
+    }
     
     return YES;
 }

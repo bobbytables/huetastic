@@ -22,6 +22,7 @@
 		85B7BA7417F2173B00B96F88 /* HUMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7317F2173B00B96F88 /* HUMainViewController.m */; };
 		85B7BA7917F22B8000B96F88 /* HULight.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7817F22B8000B96F88 /* HULight.m */; };
 		85B7BA7C17F22D0500B96F88 /* HUBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B7BA7B17F22D0500B96F88 /* HUBridge.m */; };
+		E19FD55C17F776B1005F0D4A /* HUBridgeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19FD55B17F776B1005F0D4A /* HUBridgeUserViewController.m */; };
 		EC41F3E1BBD541BF8FE275D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C96E9744B54FC28882A361 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		85B7BA7A17F22D0500B96F88 /* HUBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBridge.h; sourceTree = "<group>"; };
 		85B7BA7B17F22D0500B96F88 /* HUBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBridge.m; sourceTree = "<group>"; };
 		9BD16820EB9A44E6AE5C06B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E19FD55A17F776B1005F0D4A /* HUBridgeUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUBridgeUserViewController.h; sourceTree = "<group>"; };
+		E19FD55B17F776B1005F0D4A /* HUBridgeUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUBridgeUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 			children = (
 				85B7BA7217F2173B00B96F88 /* HUMainViewController.h */,
 				85B7BA7317F2173B00B96F88 /* HUMainViewController.m */,
+				E19FD55A17F776B1005F0D4A /* HUBridgeUserViewController.h */,
+				E19FD55B17F776B1005F0D4A /* HUBridgeUserViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B7BA7C17F22D0500B96F88 /* HUBridge.m in Sources */,
+				E19FD55C17F776B1005F0D4A /* HUBridgeUserViewController.m in Sources */,
 				855EF0A817F2166B00E57478 /* main.m in Sources */,
 				85B7BA7917F22B8000B96F88 /* HULight.m in Sources */,
 				855EF0AC17F2166C00E57478 /* HUAppDelegate.m in Sources */,

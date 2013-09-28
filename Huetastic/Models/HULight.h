@@ -7,12 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HUBridge.h"
+
+@class HULight;
+
+@protocol HULightProtocol <NSObject>
+
+-(void)didLoadingState:(HULight *)light;
+
+@end
 
 @interface HULight : NSObject
 
-@property (nonatomic, strong) NSMutableDictionary *dictionary;
+@property (nonatomic, strong) NSMutableDictionary *state;
+@property (nonatomic, strong) HUBridge *bridge;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *lightId;
+@property (nonatomic) id <HULightProtocol>delegate;
 
--(void)initWithLightId:(NSString *)lightId;
+-(id)initWithLightId:(id)lightId bridge:(HUBridge *)bridge;
+-(void)retrieveLightState;
+-(void)toggleOnOff;
+-(void)setPower:(BOOL)on;
 
 @end

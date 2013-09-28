@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "HUBridge.h"
 
-@interface HUMainViewController : UIViewController <HUBridgeDelegate>
+@interface HUMainViewController : UITableViewController <HUBridgeDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *lights;
+@property (nonatomic, strong) HUBridge *bridge;
 
 @end

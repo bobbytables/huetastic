@@ -14,23 +14,20 @@
 
 static HUBridge *sharedBridge;
 
-//+ (void)initialize
-//{
-//    static BOOL initialized = NO;
-//    if(!initialized)
-//    {
-//        initialized = YES;
-//        sharedBridge = [[HUBridge alloc] init];
-//    }
-//}
-//
-//+(instancetype)sharedBridge {
-//    return sharedBridge;
-//}
-
 -(id)initWithDelegate:(id)delegate {
     if(self = [self init]){
         self.delegate = delegate;
+        [self findBridgeIp];
+    }
+    
+    return self;
+}
+
+-(id)initWithUsername:(NSString *)username delegate:(id)delegate {
+    if(self = [super init]){
+        self.username = username;
+        self.delegate = delegate;
+        
         [self findBridgeIp];
     }
     
@@ -47,12 +44,16 @@ static HUBridge *sharedBridge;
     
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *bridgeInfo = [responseObject objectAtIndex:0];
-        self.bridgeIp = [bridgeInfo objectForKey:@"internalipaddress"];
-        NSLog(@"%@", self.bridgeIp);
-        
-        [self.delegate didFinishRetrievingBridgeIp:self];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
+        if(responseObject.count > 0){
+            NSDictionary *bridgeInfo = [responseObject objectAtIndex:0];
+            self.bridgeIp = [bridgeInfo objectForKey:@"internalipaddress"];
+            NSLog(@"%@", self.bridgeIp);
+            
+            [self.delegate didFinishRetrievingBridgeIp:self];
+        } else {
+            [self.delegate failedRetrievingBridgeIp:self];
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
     }];
@@ -60,10 +61,38 @@ static HUBridge *sharedBridge;
     [operation waitUntilFinished];
 }
 
--(NSMutableArray *)allLights {
-    NSMutableArray *lights = [NSMutableArray array];
+-(void)createUser:(NSString *)username {
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/api", self.bridgeIp]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+    [request setHTTPMethod:@"POST"];
     
-    NSString *formattedUrl = [NSString stringWithFormat:@"http://%@/api/bobbytables/lights", self.bridgeIp];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]
+                                         initWithRequest:request];
+    
+    NSDictionary *data = @{@"devicetype": @"huetastic", @"username": username};
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:nil];
+    
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [request setHTTPBody:jsonData];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
+        NSLog(@"%@", responseObject);
+        NSDictionary *response = responseObject[0];
+        
+        if([response objectForKey:@"success"]){
+            [self.delegate didCreateUser:self username:username];
+        }
+    } failure:nil];
+    
+    [operation start];
+}
+
+
+-(void)retrieveLights {
+    NSString *formattedUrl = [NSString stringWithFormat:@"http://%@/api/%@/lights", self.bridgeIp, self.username];
     NSURL *URL = [NSURL URLWithString:formattedUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
@@ -71,47 +100,25 @@ static HUBridge *sharedBridge;
                                          initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Found lights: %@", responseObject);
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        NSMutableArray *mutableLights = [NSMutableArray array];
         
         for(id key in responseObject){
-            NSDictionary *lightInfo = [responseObject objectForKey:key];
-            HULight *light = [[HULight alloc] init];
+            NSString *lightId = key;
+            
+            NSDictionary *lightInfo = [responseObject objectForKey:lightId];
+            
+            HULight *light = [[HULight alloc] initWithLightId:lightId bridge:self];
             light.name = [lightInfo objectForKey:@"name"];
             
-            [lights addObject:light];
-            
-            NSString *lightString = [NSString stringWithFormat:@"http://%@/api/bobbytables/lights/%@/state", self.bridgeIp, key];
-            NSURL *URL = [NSURL URLWithString:lightString];
-            NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-            [request setHTTPMethod:@"PUT"];
-            
-            AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]
-                                                 initWithRequest:request];
-            
-            NSDictionary *data = @{@"on": [NSNumber numberWithBool:NO]};
-            
-            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
-                                                               options:NSJSONWritingPrettyPrinted
-                                                                 error:nil];
-            
-            NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-            
-            operation.responseSerializer = [AFJSONResponseSerializer serializer];
-            [request setHTTPBody:jsonData];
-            
-            [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-                NSLog(@"%@", responseObject);
-            } failure:nil];
-            
-            [operation start];
+            [mutableLights addObject:light];
         }
+        self.lights = [NSArray arrayWithArray:mutableLights];
+        [self.delegate didFinishRetrievingLights:self.lights];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
     }];
     [operation start];
-    
-    return lights;
 }
 
 @end
